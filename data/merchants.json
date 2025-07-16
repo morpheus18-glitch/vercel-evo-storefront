@@ -1,0 +1,37 @@
+{
+  "alpha": {
+    "name": "Alpha Goods",
+    "themeColor": "#1976d2",
+    "logo": "/logos/alpha.png",
+    "products": [
+      {
+        "id": "1",
+        "name": "Alpha Shirt",
+        "desc": "Premium cotton T-shirt",
+        "price": 25,
+        "img": "/products/alpha-shirt.png"
+      },
+      {
+        "id": "2",
+        "name": "Alpha Mug",
+        "desc": "Ceramic mug",
+        "price": 15,
+        "img": "/products/alpha-mug.png"
+      }
+    ]
+  },
+  "beta": {
+    "name": "Beta Supplies",
+    "themeColor": "#43a047",
+    "logo": "/logos/beta.png",
+    "products": [
+      {
+        "id": "1",
+        "name": "Beta Notebook",
+        "desc": "Eco-friendly notebook",
+        "price": 10,
+        "img": "/products/beta-notebook.png"
+      }
+    ]
+  }
+}
