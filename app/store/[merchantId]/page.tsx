@@ -1,18 +1,22 @@
 import { notFound } from 'next/navigation'
 import merchants from '@/data/merchants.json'
 
-export default function Storefront({ params }: { params: { merchantId: string } }) {
+type Props = {
+  params: {
+    merchantId: string
+  }
+}
+
+export default function Storefront({ params }: Props) {
   const merchant = merchants[params.merchantId]
   if (!merchant) return notFound()
-
 
   return (
     <div
       style={{
         background: 'linear-gradient(135deg, #f8fbff 0%, #f0f4f8 100%)',
         minHeight: '100vh',
-        fontFamily:
-          "Inter, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif",
+        fontFamily: "Inter, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif",
         padding: '48px 0',
       }}
     >
@@ -21,8 +25,7 @@ export default function Storefront({ params }: { params: { merchantId: string } 
           maxWidth: 1120,
           margin: '0 auto',
           background: 'rgba(255,255,255,0.90)',
-          boxShadow:
-            '0 4px 28px 0 rgba(22,32,61,0.10), 0 1.5px 5px 0 rgba(0,0,0,0.01)',
+          boxShadow: '0 4px 28px 0 rgba(22,32,61,0.10), 0 1.5px 5px 0 rgba(0,0,0,0.01)',
           borderRadius: 28,
           padding: '48px 40px 40px 40px',
           backdropFilter: 'blur(6px)',
@@ -126,20 +129,17 @@ export default function Storefront({ params }: { params: { merchantId: string } 
               </div>
               <button
                 style={{
-                  background:
-                    'linear-gradient(90deg, #196ae6 0%, #1bbcf8 100%)',
+                  background: 'linear-gradient(90deg, #196ae6 0%, #1bbcf8 100%)',
                   color: '#fff',
                   fontWeight: 600,
                   fontSize: 16,
                   padding: '11px 32px',
                   border: 'none',
                   borderRadius: 10,
-                  boxShadow:
-                    '0 2px 7px 0 rgba(27,188,248,0.15), 0 1px 2px rgba(25,106,230,0.07)',
+                  boxShadow: '0 2px 7px 0 rgba(27,188,248,0.15), 0 1px 2px rgba(25,106,230,0.07)',
                   cursor: 'pointer',
                   letterSpacing: '0.2px',
-                  transition:
-                    'background 0.14s, box-shadow 0.14s, transform 0.13s',
+                  transition: 'background 0.14s, box-shadow 0.14s, transform 0.13s',
                   marginTop: 10,
                   outline: 'none',
                 }}
