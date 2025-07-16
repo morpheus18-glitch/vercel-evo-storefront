@@ -6,10 +6,6 @@ export default function Storefront({ params }: { params: { merchantId: string } 
   if (!merchant) return notFound()
 }
 
-export default function Storefront({ params }) {
-  const merchant = merchants[params.merchantId]
-  if (!merchant) return notFound()
-
   return (
     <div
       style={{
