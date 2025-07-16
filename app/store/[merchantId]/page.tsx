@@ -1,6 +1,12 @@
 import { notFound } from 'next/navigation'
 import merchants from '@/data/merchants.json'
 
+type StorefrontProps = {
+  params: {
+    merchantId: string
+  }
+}
+
 export default function Storefront({ params }) {
   const merchant = merchants[params.merchantId]
   if (!merchant) return notFound()
