@@ -4,7 +4,7 @@ import merchants from '@/data/merchants.json'
 export default function Storefront({ params }: { params: { merchantId: string } }) {
   const merchant = merchants[params.merchantId]
   if (!merchant) return notFound()
-}
+
 
   return (
     <div
