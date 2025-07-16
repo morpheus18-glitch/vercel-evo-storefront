@@ -1,12 +1,14 @@
+import React from 'react'
 import { notFound } from 'next/navigation'
 import merchants from '@/data/merchants.json'
 
 export default async function Storefront({
   params,
 }: {
-  params: { merchantId: string }
+  params: Promise<{ merchantId: string }>
 }) {
-  const merchant = merchants[params.merchantId]
+  const { merchantId } = await params
+  const merchant = merchants[merchantId]
   if (!merchant) return notFound()
 
   return (
