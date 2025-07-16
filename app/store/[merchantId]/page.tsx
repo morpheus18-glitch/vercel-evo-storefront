@@ -1,14 +1,20 @@
 import { notFound } from 'next/navigation'
 import merchants from '@/data/merchants.json'
 
-export default function Storefront({ params }: any) {
+interface StorefrontPageProps {
+  params: {
+    merchantId: string
+  }
+}
+
+export default function Storefront({ params }: StorefrontPageProps) {
   const merchant = merchants[params.merchantId]
   if (!merchant) return notFound()
 
   return (
     <div>
       <h1>{merchant.name}</h1>
-      {/* Add your modern UI JSX here, or paste the styling block from earlier */}
+      {/* Add your modern UI JSX here */}
     </div>
   )
 }
